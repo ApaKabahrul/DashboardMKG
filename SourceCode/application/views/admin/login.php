@@ -1,5 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+$data = array(
+    'name'        => 'math_captcha',
+    'value'          => '',
+    'class'       => 'form_login'
+);
 ?>
 
 <!DOCTYPE html>
@@ -14,23 +19,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<p class="tulisan_admin">Admin Area</p>
  
 		<form action="<?php echo base_url('login/aksi_login'); ?>" method="post">
-			
-			<input type="text" name="username" class="form_login" placeholder="Username"/>
-			<input type="password" name="password" class="form_login" placeholder="Password"/>
-
             <?php echo validation_errors(); ?>
 
             <?php echo form_open(); ?>
+			<input type="text" name="username" class="form_login" placeholder="Username"/>
+			<input type="password" name="password" class="form_login" placeholder="Password"/>
 
             <?php echo $math_captcha_question;?>
-
-            <?php echo $str = form_input('math_captcha');?>
+            <?php echo "<p>"?>
+            <?php echo $str = form_input($data);?>
+            
             <?php echo "<script type='text/javascript'>alert('$str');</script>"; ?>
 
-            <label class="checkbox">
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
-            <?php echo form_submit('submit', 'Submit'); ?>
+<!--            <label class="checkbox">-->
+<!--                <input type="checkbox" value="remember-me"> Remember me-->
+<!--            </label>-->
+            <?php echo form_submit('submit', 'Submit',"class='tombol_login '"); ?>
 
             <?php echo form_close();?>
 <!--            belum bisa dipake-->
