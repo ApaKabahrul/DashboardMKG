@@ -1,0 +1,350 @@
+/*
+ Theme Name: ITERA
+ Theme URL: http://itera.ac.id
+ Description: ITERA Theme for wordpress using bootstrap
+ Author:ITERA
+ Author URL: http://itera.ac.id
+ version:1.1
+*/
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: url('../img/bgh.jpg');
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.base{
+	background:#fff;
+	margin-top:0px;
+	padding-top:30px;
+	padding-bottom:15px;
+	border-bottom:solid thin #e8e8e8;
+	box-shadow: 0px -6px 22px 0px rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+}
+.top{
+    margin-bottom: 0px;
+	background:#daa520;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.header-itera{
+    background: #000;
+    min-height: 300px;
+    color: #fff;
+    text-align: center;
+    
+}
+@media (min-width: 1500px) {
+	.container {
+		width: 1470px;
+	}
+}
+
+/*.container-utama{
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    
+}*/
+
+.content{
+	background:#fff;
+	min-height:500px;
+	box-shadow:0px 4px 22px 0px rgba(0, 0, 0, 0.2);
+	padding-top: 20px;
+}
+
+.footer{
+    background: url('../img/footer.png') ;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px -6px 22px 0px rgba(0, 0, 0, 0.2);
+	text-align: center;
+}
+
+.footer a{
+    color:#fff;
+}
+
+.footer ul {
+    padding-left: 13px;
+}
+
+.footer ul li{
+    margin-bottom: 10px;
+}
+
+.text-cari{
+    width: 80%;
+    height: 35px;
+    padding-left: 10px;
+}
+
+.button-cari{
+    border:none;
+    background: #daa520;
+    min-width:17%;
+    height: 35px;
+    
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
+    background: #ae8319;
+    color: #fff;
+}
+.hover-judul{    
+    color:#dd3333;
+}
+
+.navbar{
+    background: none;
+    border:none;
+    margin-bottom: 0px;
+}
+.navbar-default .navbar-nav > li > a{
+    color:#fff;
+}
+.hover-merah:hover{
+    color:#dd3333;
+}
+
+.hover-merah a{
+    color: #000;
+    text-decoration: none;
+}
+
+.hover-merah a:hover{
+    color:#dd3333;
+}
+
+.header-content-bawah{
+    background: #e6e9e9;
+    min-height: 40px;
+    padding: 5px;
+    border-top: solid medium #dd3333;
+}
+
+.content-informasi-pengumuman{
+    border-bottom:dotted medium #f1f1f1;
+}
+
+.content-informasi-pengumuman a{
+    color:#000;
+    text-decoration: none;
+}
+
+.content-informasi-pengumuman a:hover{
+    color:#dd3333;
+}
+
+*:link, *:visited, *:hover, *:active, *:focus {
+  -webkit-transition:color .25s linear, background-color .25s linear, border-color .25s linear;
+  -moz-transition:color .25s linear, background-color .25s linear, border-color .25s linear;
+  -ms-transition:color .25s linear, background-color .25s linear, border-color .25s linear;
+  -o-transition:color .25s linear, background-color .25s linear, border-color .25s linear;
+  transition:color .25s linear, background-color .25s linear, border-color .25s linear;
+}
+
+.content-event{
+    background: #e6e9e9;
+    padding-left: 5px;
+    padding-top:5px;
+    border-bottom:dotted thin #b3b3b3;
+}
+
+.content-event a{
+    color:#000;
+    text-decoration: none;
+}
+
+.content-event a:hover{
+    color:#dd3333;
+}
+
+.ai a:hover{
+    color:#dd3333;
+}
+
+/*.thumblin-img img {
+  max-width: 100%;
+  height: auto;
+}*/
+
+.wp-post-image{
+    width:370px;
+    
+    height:auto;
+}
+
+.list ul{
+    margin-left: 0px;
+    padding-left: 0px;
+    background: #e6e9e9;
+}
+.list ul li{
+    background: url('../img/li.png');
+    /*padding: 10px;*/
+    border-bottom:dotted thin #b3b3b3;
+    list-style: none;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 2px;
+    padding-right: 10px;
+}
+
+.list ul li h4{
+    margin-top: 0px;
+}
+
+.list ul li h4 a{
+    color: #000;
+}
+
+.list ul li a:hover{
+    color:#dd3333;
+    text-decoration: none;
+
+}
+
+.listputih ul{
+    margin-left: 0px;
+    padding-left: 0px;
+    /*background: #e6e9e9;*/
+}
+.listputih ul li{
+    background: url('../img/li.png');
+    /*padding: 10px;*/
+    border-bottom:dotted thin #b3b3b3;
+    list-style: none;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 2px;
+    padding-right: 10px;
+    margin-bottom: 5px;
+}
+
+.listputih ul li h4{
+    margin-top: 0px;
+}
+
+.listputih ul li h4 a{
+    color: #000;
+}
+
+.listputih ul li a:hover{
+    color:#dd3333;
+    text-decoration: none;
+
+}
+
+.linya ul{
+    padding-left:10px;
+    margin-left:10px;
+}
+
+.jumbotron{
+background-image: url("images/gm12.jpg"); 
+color:#fff;
+min-height:300px;
+}
+
+.modal-header{
+    background: #daa520;
+    color: #fff;
+}
+.table-hover-nilai tbody tr:hover td {
+    background: #86d3fe;
+	-webkit-transition-property: none;
+	-moz-transition-property: none;
+	-o-transition-property: none;
+	transition-property: none;
+}
+
+.td-bg-merah td {
+	color: white;
+	background-color: #F44336!important;
+}
+.form-row{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+h1{
+    text-align: center;
+    background-color: #daa520;
+    /*ketebalan font*/
+    font-weight: 300;
+}
+ 
+.tulisan_admin{
+    text-align: center;
+    margin-bottom: 20px;
+    /*membuat semua huruf menjadi kapital*/
+    text-transform: uppercase;
+}
+ 
+.kotak_login{
+    width: 300px;
+    background: #fff;
+    /*meletakkan form ke tengah*/
+    margin: 80px auto;
+    padding: 30px 20px;
+    border-radius: 8px; 
+}
+ 
+label{
+    font-size: 11pt;
+    text-align:center;
+}
+ 
+.form_login{
+    /*membuat lebar form penuh*/
+    box-sizing : border-box;
+    width: 100%;
+    padding: 10px;
+    font-size: 11pt;
+    margin-bottom: 20px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 6px;
+}
+ 
+.tombol_login{
+    background: rgba(0,0,0,0.1); 
+    color: #daa520;
+    font-size: 12pt;
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+}
+
+
+/* Step */
+
+.bs-wizard {margin-top: 40px;}
+
+/*Form Wizard*/
+.bs-wizard {border-bottom: solid 1px #e0e0e0; padding: 0 0 10px 0;}
+.bs-wizard > .bs-wizard-step {padding: 0; position: relative;}
+.bs-wizard > .bs-wizard-step + .bs-wizard-step {}
+.bs-wizard > .bs-wizard-step .bs-wizard-stepnum {color: #595959; font-size: 16px; margin-bottom: 5px;}
+.bs-wizard > .bs-wizard-step .bs-wizard-info {color: #999; font-size: 14px;}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot {position: absolute; width: 30px; height: 30px; display: block; background: #fbe8aa; top: 45px; left: 50%; margin-top: -15px; margin-left: -15px; border-radius: 50%;} 
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {content: ' '; width: 14px; height: 14px; background: #fbbd19; border-radius: 50px; position: absolute; top: 8px; left: 8px; } 
+.bs-wizard > .bs-wizard-step > .progress {position: relative; border-radius: 0px; height: 8px; box-shadow: none; margin: 20px 0;}
+.bs-wizard > .bs-wizard-step > .progress > .progress-bar {width:0px; box-shadow: none; background: #fbe8aa;}
+.bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {width:100%;}
+.bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {width:50%;}
+.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {width:0%;}
+.bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {width: 100%;}
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {background-color: #f5f5f5;}
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {opacity: 0;}
+.bs-wizard > .bs-wizard-step:first-child  > .progress {left: 50%; width: 50%;}
+.bs-wizard > .bs-wizard-step:last-child  > .progress {width: 50%;}
+.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot{ pointer-events: none; }
+/*END Form Wizard*/
