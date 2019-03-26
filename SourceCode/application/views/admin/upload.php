@@ -1,3 +1,9 @@
+<?php
+if($this->session->userdata('nama')){
+
+}else{
+    
+}?>
 <body>
   <center><h1>UPLOAD FILE ADMIN</h1></center>
  <br></br>

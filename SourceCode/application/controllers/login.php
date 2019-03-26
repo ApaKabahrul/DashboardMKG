@@ -31,6 +31,7 @@ class login extends CI_Controller {
 	function aksi_login(){
 
         $this->load->library('mathcaptcha');
+        $this->load->library('session');
         $this->mathcaptcha->init();
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
@@ -47,7 +48,6 @@ class login extends CI_Controller {
                     'status' => "login" );
 
                 $this->session->set_userdata($data_session);
-                $a = true;
                 redirect(base_url("admin"));
             }
             else {
@@ -57,7 +57,6 @@ class login extends CI_Controller {
         }else
         {
             echo "<script type='text/javascript'>alert('capsa salah');</script>";
-            $a = false;
             //redirect(base_url("login"));
         }
 
