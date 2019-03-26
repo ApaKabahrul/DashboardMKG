@@ -44,7 +44,11 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
+            <?php if($this->session->userdata('nama')){
+                echo "<li><a href=\"<?php echo base_url('admin/logout');?>\"><i class=\"glyphicon glyphicon-log-out\"></i> Logout</a></li>";
+            }else{
+
+            }?>
                     </ul>
       </div>  
   </nav>
