@@ -51,12 +51,16 @@ class login extends CI_Controller {
                 redirect(base_url("admin"));
             }
             else {
-                echo "<script type='text/javascript'>alert('Password Salah');</script>";
+                echo "<script>
+            alert('Password Salah');window.location='index';
+            </script>";
                 $a = false;
             }
         }else
         {
-            echo "<script type='text/javascript'>alert('capsa salah');</script>";
+            echo "<script>
+            alert('CAPTCHA Salah');window.location='index';
+            </script>";
             //redirect(base_url("login"));
         }
 
