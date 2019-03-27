@@ -36,7 +36,7 @@
  * appropriately.
  */
 define('MATHCAPTCHA_NUMERIC_TEXT_RANGE_LOW',        0);
-define('MATHCAPTCHA_NUMERIC_TEXT_RANGE_HIGH',       100);
+define('MATHCAPTCHA_NUMERIC_TEXT_RANGE_HIGH',       10);
 
 /**
  * The highest the numbers in the question can be. This is so that the answer
@@ -50,10 +50,10 @@ define('MATHCAPTCHA_MAX_QUESTION_NUMBER_SIZE',      10);
  * the following number(s) to 1 and remove the unnecessary phrases from the
  * language file. The phrase will be randomly selected for each CAPTCHA question.
  */
-define('MATHCAPTCHA_NUM_ADDITION_PHRASES',          5);
-define('MATHCAPTCHA_NUM_SUBTRACTION_PHRASES',       5);
-define('MATHCAPTCHA_NUM_MULTIPLICATION_PHRASES',    5);
-define('MATHCAPTCHA_NUM_DIVISION_PHRASES',          5);
+define('MATHCAPTCHA_NUM_ADDITION_PHRASES',          1);
+define('MATHCAPTCHA_NUM_SUBTRACTION_PHRASES',       1);
+define('MATHCAPTCHA_NUM_MULTIPLICATION_PHRASES',    1);
+define('MATHCAPTCHA_NUM_DIVISION_PHRASES',          1);
 
 Class Mathcaptcha
 {
