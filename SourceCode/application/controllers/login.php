@@ -20,6 +20,7 @@ class login extends CI_Controller {
 
         if ($this->form_validation->run() == FALSE)
         {
+            $this->load->view('v_header');
             $this->load->view('admin/login', $data);
         }
         else
