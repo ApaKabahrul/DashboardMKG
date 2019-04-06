@@ -1,7 +1,7 @@
 # DashboardMKG
 Members:
 
-1. Rizky Juliansyah           as  Project manager
+1. Rizki Juliansyah           as  Project manager
 2. Meidiarni Kurnia Dewi      as  Front-end Developer
 3. Fristy Riani Puspitasari   as  Front-end Developer
 4. Muhammad Surya Ramadhan    as  Database Administrator & Back-end Developer
