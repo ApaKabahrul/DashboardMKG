@@ -9,6 +9,7 @@ class Admin extends CI_Controller{
 		if($this->session->userdata('status') != "login"){
 			redirect(base_url("login"));
 		}
+        $this->load->library('mongo_db',array('active'=>'default'),'mongo_db');
 	}
 
 	function index(){
@@ -21,15 +22,39 @@ class Admin extends CI_Controller{
         redirect(base_url('login'));
     }
     function import(){
-	    echo "<script> console.log(a);</script>";
         $file_data = $this->csvimport->get_array($_FILES["csv_file"]["tmp_name"]);
+//        $res=$this->mongo_db->order_by(array('id' => 'DESC'))->limit(1)->get('admin');
+        $res=$this->adminmodel->jumlah();
+//        foreach ($res as $doc) {
+//            $id = $doc['id'];
+//        }
+        $id=$res;
+        $a="000";
         foreach($file_data as $row)
         {
-            $data[] = array(
-                'username'		=>	$row["username"],
-                'password'		=>	$row["password"]
+            $id++;
+            $data = array(
+                'id'                =>  (String)$id,
+                'waktu'		        =>	$row['waktu'],
+                'temperature'	    =>	$row['temperature'],
+                'sun_radiation'	    =>	$row['sun_radiation'],
+                'Relative_humidity'	=>	$row['Relative_humidity'],
+                'wind_direction'	=>	$row['wind_direction'],
+                'wind_speed'	    =>	$row['wind_speed'],
+                'pressure'	        =>	$row['pressure'],
+                'rain_rate'	        =>	$row['rain_rate'],
+                'timestamp'		    =>	$row['timestamp'].$a
                 );
+            $this->adminmodel->insertmo($data);
+            $data=null;
         }
-        $this->adminmodel->insert($data);
+
+    }
+
+
+
+
+    function load_data(){
+	    echo 1;
     }
 }
