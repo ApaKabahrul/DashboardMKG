@@ -52,4 +52,11 @@ class Admin extends CI_Controller{
         echo json_encode($response_array);
 
     }
+
+
+
+
+    function load_data(){
+	    echo 1;
+    }
 }
