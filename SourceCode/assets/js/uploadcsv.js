@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    load_data()
+
     $('.satu').removeClass('active');
     $('.dua').removeClass('active');
     $('.tiga').removeClass('active');
@@ -8,20 +8,9 @@ $(document).ready(function(){
     $('.enam').removeClass('active');
     $('.tujuh').removeClass('active');
     $('.delapan').removeClass('active');
-    function load_data()
-    {
-        $.ajax({
-            url:"admin/load_data",
-            method:"POST",
 
-            success:function(data)
-            {
-                $('#imported_csv_data').html(data);
-            }
-        });
-    }
 
-    $('#import_csv').on('submit', function(event){
+    $('#import_csv').on('submit', function(){
 
         event.preventDefault();
         $.ajax({
@@ -36,7 +25,15 @@ $(document).ready(function(){
             },
             success:function(data)
             {
-                alertify.alert('SISTEM DASHBOARD MKG ITERA', 'Upload Berhasil!');
+                if(data == '"success"'){
+                    //keperluan testing
+                    alertify.alert('SISTEM DASHBOARD MKG ITERA', 'Upload Berhasil');
+                    // alert("Upload Berhasil");
+                }else if(data == '"error"'){
+                    // keperluan testing
+                    alertify.alert('SISTEM DASHBOARD MKG ITERA','Upload Gagal');
+                    // alert("Upload Gagal");
+                }
                 $('#import_csv')[0].reset();
                 $('#import_csv_btn').attr('disabled', false);
                 $('#import_csv_btn').html('Import Done');
