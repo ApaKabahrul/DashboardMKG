@@ -58,7 +58,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('database','session','form_validation');
+$autoload['libraries'] = array('session','form_validation','Mongo_db');
 
 /*
 | -------------------------------------------------------------------
@@ -89,7 +89,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url', 'captcha');
+$autoload['helper'] = array('url', 'captcha','form');
 
 /*
 | -------------------------------------------------------------------
