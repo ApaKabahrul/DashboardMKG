@@ -7,11 +7,14 @@ class login extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('login_model');
+        if($this->session->userdata('status') == "login"){
+			redirect(base_url("admin"));
+		}
 	}
 
 	public function index()
 	{
-		//$this->load->view('admin/login');
+		//$this->load->view('adminModel/login');
         $this->load->library('mathcaptcha');
         $this->mathcaptcha->init();
 		$data['math_captcha_question'] = $this->mathcaptcha->get_question();
@@ -38,7 +41,8 @@ class login extends CI_Controller {
 		$password = $this->input->post('password');
 		$where = array('username' => $username,
 					   'password' => md5($password));
-		$cek = $this->login_model->cek_login("admin",$where)->num_rows();
+		$cek= count($this->login_model->cek_user($where));
+//        $cek = $this->login_model->cek_login("admin",$where)->num_rows();
         $str = $this->input->post('math_captcha');
 
         if ($this->mathcaptcha->check_answer($str))
