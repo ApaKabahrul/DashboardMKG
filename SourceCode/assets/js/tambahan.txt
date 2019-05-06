@@ -1,0 +1,2 @@
+tambahkan script ini di semua file js admin dan uploadcsv
+$('.sembilan').removeClass('active');
