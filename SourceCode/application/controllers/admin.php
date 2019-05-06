@@ -15,6 +15,11 @@ class Admin extends CI_Controller{
 	function index(){
 		$this->load->view('v_header');
 		$this->load->view('v_sidebar');
+		$this->load->view('admin/tutorial');
+	}
+	function upload(){
+		$this->load->view('v_header');
+		$this->load->view('v_sidebar');
 		$this->load->view('admin/upload');
 	}
     function logout(){
@@ -51,12 +56,5 @@ class Admin extends CI_Controller{
         }
         echo json_encode($response_array);
 
-    }
-
-
-
-
-    function load_data(){
-	    echo 1;
     }
 }
