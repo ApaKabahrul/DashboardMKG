@@ -4,7 +4,8 @@
             <?php if($this->session->userdata('nama')){ ?>
                 <div class="list-group">
                     <a href="#" class="list-group-item list-group-item-header">Administrator</a>
-                    <a href="<?php echo base_url('admin');?>" class="list-group-item lima"><i class="fa fa-upload tab10 lima" aria-hidden="true"></i>Upload</a>
+                    <a href="<?php echo base_url('admin');?>" class="list-group-item sembilan"><i class="fa fa-book tab10 sembilan" aria-hidden="true"></i>Tutorial</a>
+                    <a href="<?php echo base_url('admin/upload');?>" class="list-group-item lima"><i class="fa fa-upload tab10 lima" aria-hidden="true"></i>Upload</a>
                 </div>
             <?php }else{
 
