@@ -17,7 +17,6 @@ class adminmodel extends CI_Model
         $this->db->insert_batch('admin', $data);
     }
     function insertmo($data){
-
         $this->mongo_db->insert('Weather1', $data);
     }
     function jumlah(){

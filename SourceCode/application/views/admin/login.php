@@ -21,13 +21,11 @@ if($this->session->userdata('nama')){
 			<input type="text" name="username" class="form_login" placeholder="Username"/>
 			<input type="password" name="password" class="form_login" placeholder="Password"/>
 
-            <p id="capcha" v><?php echo $math_captcha_question;?></p>
+            <p id="capcha" </p><?php echo $math_captcha_question;?></p>
             <input type="text" name="math_captcha" class="form_login" placeholder="captcha" />
             <?php echo "<p></p>"?>
             <?php echo form_submit('submit', 'Submit',"class='tombol_login '"); ?>
             <?php echo form_close();?>
-<!--            belum bisa dipake-->
-<!--			<input type="submit" class="tombol_login" value="Submit"/>-->
 		</form>
 
     </div> 

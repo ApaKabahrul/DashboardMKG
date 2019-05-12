@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    //Cara membuat list group yang ada di v_sidebar active sesuai dengan apa yang di pilih.
     $('.satu').removeClass('active');
     $('.dua').removeClass('active');
     $('.tiga').removeClass('active');
@@ -8,13 +8,14 @@ $(document).ready(function(){
     $('.enam').removeClass('active');
     $('.tujuh').removeClass('active');
     $('.delapan').removeClass('active');
-
-
+    $('.sembilan').removeClass('active');
+    //Fungsi yang aktif ketika form dengan id import_csv mengirimkan data dengan type sumbit di tekan.
     $('#import_csv').on('submit', function(){
 
         event.preventDefault();
         $.ajax({
-            url:"admin/import",
+            //url untuk memanggil dan menerima output dari fungsi import pada controller admin
+            url:"import",
             method:"POST",
             data:new FormData(this),
             contentType:false,
@@ -25,6 +26,8 @@ $(document).ready(function(){
             },
             success:function(data)
             {
+                //Menerima hasil dari fungsi import
+                // Jika Success maka akan tampil upload berhasil dan gagal akan tampil upload gagal
                 if(data == '"success"'){
                     //keperluan testing
                     alertify.alert('SISTEM DASHBOARD MKG ITERA', 'Upload Berhasil');
@@ -35,12 +38,11 @@ $(document).ready(function(){
                     // alert("Upload Gagal");
                 }
                 $('#import_csv')[0].reset();
-                $('#import_csv_btn').attr('disabled', false);
-                $('#import_csv_btn').html('Import Done');
 
             },
             error: function () {
-                alertify.error('upload gagal');
+                //Pesan yang digunakan jika 'url: import' diatas tidak dapat ditemukan
+                alertify.error('Function Tidak ditemukan');
             }
 
         })

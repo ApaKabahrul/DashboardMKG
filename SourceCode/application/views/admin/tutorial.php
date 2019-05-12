@@ -11,7 +11,7 @@ if($this->session->userdata('nama')){
 <body>
       <div class="col-md-9">
           <div class="container content">
-          <embed type="application/pdf" src="<?php echo base_url()?>assets/KETENTUAN FORMAT UPLOAD DATA.pdf" width="100%" height="500px"  frameborder="0">
+              <embed type="application/pdf" src="<?php echo base_url()?>assets/KETENTUAN FORMAT UPLOAD DATA.pdf#toolbar=0" width="100%" height="500px"  frameborder="0">
           </div>
       </div>
 </body>

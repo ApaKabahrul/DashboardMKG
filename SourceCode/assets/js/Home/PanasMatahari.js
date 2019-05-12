@@ -1,5 +1,6 @@
 
 window.onload = function () {
+    //Cara membuat list group yang ada di v_sidebar active sesuai dengan apa yang di pilih.
     $('.satu').addClass('active');
     $('.dua').removeClass('active');
     $('.tiga').removeClass('active');
@@ -8,7 +9,10 @@ window.onload = function () {
     $('.enam').removeClass('active');
     $('.tujuh').removeClass('active');
     $('.delapan').removeClass('active');
+    $('.sembilan').removeClass('active');
+    //deklarasi datapoints untuk menampung data
     var dataPoints = [];
+    //Library Chart Js diaktifkan berdasarkan 'Id' pada .Chart("Id" yang di ambil di halaman tampilannya
     var chart = new CanvasJS.Chart("PanasMatahari", {
         animationEnabled: true,
         // theme: "light2",
@@ -20,15 +24,14 @@ window.onload = function () {
         axisY: {
             title: "",
             titleFontSize: 24,
-            prefix: "W/m2   "
+            suffix: " W/m2"
         },
         data: [{
             type: "line",
             yValueFormatString: "",
             dataPoints: dataPoints
         }]});
-//
-
+    //Pengolahan data yang di dapat dari json dibawah
     function addData(data) {
         var dps = data.item;
         console.log(dps.length);
@@ -40,8 +43,9 @@ window.onload = function () {
         }
         chart.render();
     }
+    //Pengambilan data sensor dan dimasukkan kedalam fungsi addData
     $.getJSON("Home/panasmatahari", addData);
-
+    //digunakan untuk render chart.
     chart.render();
 
 };
